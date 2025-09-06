@@ -1,4 +1,4 @@
-name: Show Current Date
+name: time
 on:
   pull_request:
     types: [opened, synchronize]

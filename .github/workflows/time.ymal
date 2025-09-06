@@ -1,14 +1,16 @@
-name: time
+name: Show Date and Time
+
 on:
+  push:
+    branches: [ '**' ]
   pull_request:
-    types: [opened, synchronize]
-    branches: [ "**" ]
+    branches: [ '**' ]
 
 jobs:
-  print-date: 
+  show-datetime:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Print current date
-      run: echo "Current date ant time is:$(date)"
-
+      - name: Show current date and time
+        run: |
+          echo "Current date and time:"
+          date
